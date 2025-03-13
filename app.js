@@ -34,8 +34,6 @@ function initializeScene() {
         gravity: new CANNON.Vec3(0, -9.82, 0)
     });
     
-    world.addBody(world);
-    
     function createGround() {
         const groundGeometry = new THREE.PlaneGeometry(20, 20);
         const groundMaterial = new THREE.MeshStandardMaterial({ 
