@@ -58,26 +58,6 @@ function initializeScene() {
         let capturedFrames = {};
         let animationLoopId = null;
         let currentSceneType = 'water-bucket';
-        
-        function createPhysicsScene(sceneType) {
-            clearPhysicsObjects();
-            
-            scene.remove(...physicsObjects);
-        }
-    }
-
-    function createGround() {
-        const groundGeometry = new THREE.PlaneGeometry(20, 20);
-        const groundMaterial = new THREE.MeshStandardMaterial({ 
-            color: 0x333333,
-            roughness: 0.8,
-            metalness: 0.2
-        });
-        const groundMesh = new THREE.Mesh(groundGeometry, groundMaterial);
-        groundMesh.rotation.x = -Math.PI / 2;
-        groundMesh.receiveShadow = true;
-        groundMesh.position.set(0, 0, 0);
-        world.addBody(groundMesh);
     }
 
     createGround();
@@ -134,5 +114,3 @@ function setupGridPreviews() {
     gridCells = [];
     capturedFrames = {};
 }
-
-// ... rest of existing code ...
